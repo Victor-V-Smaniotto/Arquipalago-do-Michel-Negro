@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+header{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header h2{
+    font-size: 1.2rem;
+}
+
+.carousel{
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.Card{
+    width: 90%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.row-g4,
+.col-12{
+    width: 100%;
+}
+
+.card{
+    height: 100%;
+    transition: .3s;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card-img-top{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    padding: 10px;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+.card-title{
+    margin-bottom: 10px;
+}
+
+.card-text{
+    margin-bottom: 15px;
+}
+
+.card-body div{
+    padding: 6px 0;
+}
+
+footer{
+    height: 80px;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px){
+
+    header h1{
+        font-size: 2.2rem;
+    }
+
+    header h2{
+        font-size: 1rem;
+    }
+
+    .carousel-item img{
+        height: 300px;
+    }
+
+    .card-img-top{
+        height: 220px;
+    }
+
+    .Card{
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px){
+
+    header{
+        padding: 25px 10px;
+    }
+
+    header h1{
+        font-size: 1.8rem;
+    }
+
+    .carousel-item img{
+        height: 220px;
+    }
+
+    .card-img-top{
+        height: 180px;
+    }
+}
