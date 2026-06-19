@@ -139,10 +139,18 @@ button:hover{
 
 
 footer{
+    width:100%;
     margin-top:60px;
-    background:#2A170C;
-    text-align:center;
     padding:25px;
+    text-align:center;
+    background:#2A170C;
+    border-top:3px solid #8B5E3C;
+}
+
+footer .card-footer{
+    background:none !important;
+    border:none !important;
+    width:100%;
 }
 
 footer p{

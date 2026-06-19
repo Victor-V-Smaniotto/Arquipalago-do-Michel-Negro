@@ -169,6 +169,92 @@ footer p{
     color:#D8C3A5 !important;
 }
 
+#lista-users{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+#lista-users .card{
+    width:320px;
+    background:#4B2E1E;
+    color:#F5E6CA;
+    border:3px solid #8B5E3C;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+    transition:.3s;
+}
+
+#lista-users .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(217,164,65,.4);
+}
+
+#lista-users .card h3{
+    color:#D9A441;
+    font-size:2rem;
+    margin-bottom:20px;
+    text-shadow:0 0 10px rgba(217,164,65,.4);
+}
+
+#lista-users .card p{
+    font-size:1.1rem;
+    margin:12px 0;
+    color:#E8DCC4;
+    font-weight:600;
+}
+
+#lista-users .card strong{
+    color:#F5E6CA;
+}
+
+@media(max-width:992px){
+
+    #lista-users .card{
+        width:280px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    #lista-users{
+        gap:20px;
+    }
+
+    #lista-users .card{
+        width:90%;
+        max-width:400px;
+    }
+
+    #lista-users .card h3{
+        font-size:1.7rem;
+    }
+
+}
+
+@media(max-width:576px){
+
+    #lista-users .card{
+        width:100%;
+    }
+
+    #lista-users .card h3{
+        font-size:1.4rem;
+    }
+
+    #lista-users .card p{
+        font-size:1rem;
+    }
+
+}
+
 @keyframes portal{
     0%{
         opacity:0;
@@ -301,4 +387,65 @@ footer p{
         font-size:.9rem;
     }
 
+}
+
+#Form{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+form{
+    background: rgba(42,23,12,.9);
+    padding: 35px;
+    border: 3px solid #8B5E3C;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,.6);
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+    color:#D9A441;
+    font-size:1.3rem;
+    font-weight:bold;
+}
+
+.form-control{
+    background:#4B2E1E !important;
+    border:2px solid #8B5E3C !important;
+    color:#F5E6CA !important;
+    font-size:1.2rem;
+    padding:12px;
+}
+
+.form-control::placeholder{
+    color:#E8DCC4 !important;
+}
+
+.form-control:focus{
+    background:#4B2E1E !important;
+    color:#F5E6CA !important;
+    border-color:#D9A441 !important;
+    box-shadow:0 0 15px rgba(217,164,65,.5) !important;
+}
+
+.invalid-feedback{
+    color:#ff6b6b !important;
+    font-size:1rem;
+}
+
+button[type="submit"]{
+    margin-top:25px;
+    padding:12px 30px;
+    background:#D9A441;
+    color:#2A170C;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:1.1rem;
+}
+
+button[type="submit"]:hover{
+    background:#f0bc58;
 }
