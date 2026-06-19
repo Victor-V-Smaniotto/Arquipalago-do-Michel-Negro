@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    background-image:url("../img/medieval-tavern-wood-stockcake.webp");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    font-family:'MedievalSharp', cursive;
+    animation:portal 1.2s ease-out;
+}
+
+.navbar{
+    background:#2A170C !important;
+    border-bottom:3px solid #8B5E3C;
+    box-shadow:0 4px 15px rgba(0,0,0,.5);
+}
+
+.navbar-brand{
+    color:#D9A441 !important;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.nav-link{
+    color:#F5E6CA !important;
+    margin-left:10px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#D9A441 !important;
+}
+
+header{
+    text-align:center;
+    padding:80px 20px 40px;
+}
+
+header h1{
+    font-size:4rem;
+    color:#D9A441;
+    text-shadow:0 0 15px rgba(217,164,65,.6);
+}
+
+.Capitulos{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.row-g4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    align-items:start;
+}
+
+.card-wrapper{
+    width:100%;
+}
+
+.card{
+    background:#4B2E1E !important;
+    color:#F5E6CA !important;
+    border:3px solid #8B5E3C !important;
+    border-radius:15px !important;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(217,164,65,.5);
+}
+
+.card-img-top{
+    height:220px;
+    width:100%;
+    object-fit:contain;
+    background:rgba(0,0,0,.15);
+    padding:15px;
+}
+
+.card-body{
+    padding:18px;
+}
+
+.card-title{
+    color:#D9A441;
+    text-align:center;
+    font-size:1.6rem;
+}
+
+.card-text{
+    text-align:center;
+    color:#E8DCC4;
+}
+
+.card-body div{
+    padding:7px 0;
+    border-bottom:1px solid rgba(245,230,202,.15);
+}
+
+.card-body div:last-child{
+    border:none;
+}
+
+.card-body span{
+    color:#D8C3A5;
+}
+
+.card-body strong{
+    color:#F5E6CA;
+}
+
+.btn-warning{
+    margin-top:15px;
+    width:100%;
+    background:#D9A441 !important;
+    border:none !important;
+    color:#2A170C !important;
+}
+
+.collapse{
+    color:#F5E6CA;
+}
+
+footer{
+    margin-top:60px;
+    padding:25px;
+    text-align:center;
+    background:#2A170C;
+    border-top:3px solid #8B5E3C;
+}
+
+footer p{
+    margin:0;
+    color:#D8C3A5;
+}
+
+.card-footer{
+    background:none !important;
+    border:none !important;
+}
+
+
+@keyframes portal{
+
+    0%{
+        opacity:0;
+        transform:scale(1.1);
+        filter:blur(15px);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+}
+
+
+@media(max-width:1100px){
+
+    .row-g4{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    header h1{
+        font-size:3rem;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .row-g4{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    .card-img-top{
+        height:200px;
+    }
+
+}
