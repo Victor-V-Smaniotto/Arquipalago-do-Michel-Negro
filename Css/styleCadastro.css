@@ -14,6 +14,7 @@ body{
     background-position:center;
     background-attachment:fixed;
     color:#F5E6CA;
+    animation: portal 1.2s ease-out;
 }
 
 .navbar{
@@ -218,6 +219,25 @@ footer{
     margin:10px 0;
     color:#E8DCC4;
     font-weight:600;
+}
+
+@keyframes portal{
+    0%{
+        opacity:0;
+        transform:scale(1.15);
+        filter:blur(20px) brightness(2);
+    }
+
+    50%{
+        opacity:.7;
+        filter:blur(8px) brightness(1.5);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0) brightness(1);
+    }
 }
 
 @media(max-width:768px){
