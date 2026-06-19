@@ -1,0 +1,61 @@
+body{
+    min-height:100vh;
+    background-image:url("../img/medieval-tavern-wood-stockcake.webp");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    font-family:'MedievalSharp', cursive;
+    color:#F5E6CA;
+}
+
+header{
+    text-align:center;
+    padding:80px 20px 30px;
+}
+
+header h1{
+    font-size:3.5rem;
+    color:#D9A441;
+    text-shadow:0 0 15px rgba(217,164,65,.5);
+}
+
+header p{
+    color:#D8C3A5;
+    font-size:1.2rem;
+}
+
+#Form{
+    max-width:700px;
+    margin:0 auto;
+    padding:30px;
+}
+
+form{
+    background:rgba(75,46,30,.95);
+    padding:30px;
+    border-radius:15px;
+    border:3px solid #8B5E3C;
+    box-shadow:0 8px 25px rgba(0,0,0,.6);
+}
+
+label{
+    margin-top:10px;
+    display:block;
+    color:#D9A441;
+    font-weight:bold;
+}
+
+.form-control{
+    background:#2A170C !important;
+    border:2px solid #8B5E3C !important;
+    color:#F5E6CA !important;
+}
+
+.form-control::placeholder{
+    color:#bfae96;
+}
+
+.form-control:focus{
+    box-shadow:0 0 10px rgba(217,164,65,.4) !important;
+    border-color:#D9A441 !important;
+}
