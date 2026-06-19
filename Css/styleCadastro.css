@@ -190,6 +190,36 @@ footer{
     color:#D8C3A5;
 }
 
+#lista-users{
+    max-width:800px;
+    margin:40px auto;
+}
+
+#lista-users .card{
+    background:rgba(75,46,30,.95);
+    border:3px solid #8B5E3C;
+    border-radius:15px;
+    color:#F5E6CA;
+    padding:25px;
+    margin-top:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+    text-align:center;
+}
+
+#lista-users .card h3{
+    color:#D9A441;
+    font-size:2rem;
+    margin-bottom:20px;
+    text-shadow:0 0 10px rgba(217,164,65,.4);
+}
+
+#lista-users .card p{
+    font-size:1.2rem;
+    margin:10px 0;
+    color:#E8DCC4;
+    font-weight:600;
+}
+
 @media(max-width:768px){
 
     header{
