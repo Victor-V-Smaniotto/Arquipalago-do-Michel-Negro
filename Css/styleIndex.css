@@ -12,7 +12,7 @@ body{
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    color:#F5E6CA;
+    color:#F8EFD4;
 }
 
 
@@ -39,26 +39,22 @@ body{
 }
 
 #hero h3{
-    color:#F5E6CA;
+    color:#FFF4D6;
     max-width:800px;
     margin:auto;
+    text-shadow:1px 1px 4px rgba(0,0,0,.8);
 }
 
 
 section:not(#hero){
     width:85%;
     max-width:1000px;
-
     margin:40px auto;
     padding:30px;
-
-    background:rgba(75,46,30,.9);
-
+    background:rgba(55,35,22,.95);
     border:3px solid #8B5E3C;
     border-radius:15px;
-
     text-align:center;
-
     box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
 
@@ -77,13 +73,15 @@ section h5{
 }
 
 section h2{
-    color:white;
+    color:#FFF8E8;
     margin:15px 0;
 }
 
 section p{
+    color:#F3E7C9;
     max-width:700px;
     margin:auto;
+    line-height:1.7;
 }
 
 
@@ -113,6 +111,11 @@ footer{
     background:#2A170C;
     text-align:center;
     padding:25px;
+}
+
+footer p{
+    margin:0;
+    color:#D8C3A5;
 }
 
 .carousel {
@@ -159,8 +162,8 @@ footer{
     text-shadow: 0 0 8px rgba(217,164,65,.5);
 }
 
-.carousel-caption p {
-    color: #F5E6CA;
+.carousel-caption p{
+    color:#FFF4D6;
 }
 
 .carousel-control-prev-icon,
