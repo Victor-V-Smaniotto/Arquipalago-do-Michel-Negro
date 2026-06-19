@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'MedievalSharp', cursive;
+    background-image:url("../img/medieval-tavern-wood-stockcake.webp");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    color:#F5E6CA;
+}
+
+
+.navbar{
+    background:#2A170C !important;
+    border-bottom:3px solid #8B5E3C;
+}
+
+
+#hero{
+    text-align:center;
+    padding:150px 20px 100px;
+    background:rgba(42,23,12,.75);
+}
+
+#hero h1{
+    color:#D9A441;
+    font-size:4rem;
+    margin-bottom:20px;
+
+    text-shadow:
+    0 0 10px rgba(217,164,65,.7),
+    0 0 20px rgba(217,164,65,.4);
+}
+
+#hero h3{
+    color:#F5E6CA;
+    max-width:800px;
+    margin:auto;
+}
+
+
+section:not(#hero){
+    width:85%;
+    max-width:1000px;
+
+    margin:40px auto;
+    padding:30px;
+
+    background:rgba(75,46,30,.9);
+
+    border:3px solid #8B5E3C;
+    border-radius:15px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+section img{
+    width:250px;
+    height:auto;
+
+    border-radius:10px;
+
+    margin:20px 0;
+}
+
+section h5{
+    color:#D9A441;
+    font-size:1.8rem;
+}
+
+section h2{
+    color:white;
+    margin:15px 0;
+}
+
+section p{
+    max-width:700px;
+    margin:auto;
+}
+
+
+button{
+    margin-top:20px;
+
+    padding:10px 25px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#D9A441;
+    color:#2A170C;
+
+    cursor:pointer;
+
+    font-weight:bold;
+}
+
+button:hover{
+    background:#f0bc58;
+}
+
+
+footer{
+    margin-top:60px;
+    background:#2A170C;
+    text-align:center;
+    padding:25px;
+}
