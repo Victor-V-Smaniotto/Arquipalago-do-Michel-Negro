@@ -1,22 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     min-height:100vh;
+    font-family:'MedievalSharp', cursive;
     background-image:url("../img/medieval-tavern-wood-stockcake.webp");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    font-family:'MedievalSharp', cursive;
     color:#F5E6CA;
+}
+
+.navbar{
+    background:#2A170C !important;
+    border-bottom:3px solid #8B5E3C;
+    box-shadow:0 4px 15px rgba(0,0,0,.5);
+}
+
+.navbar-brand{
+    color:#D9A441 !important;
+    font-size:1.5rem;
+}
+
+.nav-link{
+    color:#F5E6CA !important;
+}
+
+.nav-link:hover{
+    color:#D9A441 !important;
 }
 
 header{
     text-align:center;
-    padding:80px 20px 30px;
+    padding:120px 20px 40px;
 }
 
 header h1{
-    font-size:3.5rem;
+    font-size:4rem;
     color:#D9A441;
-    text-shadow:0 0 15px rgba(217,164,65,.5);
+    text-shadow:
+    0 0 10px rgba(217,164,65,.6),
+    0 0 20px rgba(217,164,65,.3);
 }
 
 header p{
@@ -25,37 +54,173 @@ header p{
 }
 
 #Form{
-    max-width:700px;
-    margin:0 auto;
-    padding:30px;
+    width:90%;
+    max-width:800px;
+    margin:0 auto 60px;
 }
 
 form{
-    background:rgba(75,46,30,.95);
-    padding:30px;
-    border-radius:15px;
+    background:#4B2E1E;
     border:3px solid #8B5E3C;
-    box-shadow:0 8px 25px rgba(0,0,0,.6);
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
 
 label{
-    margin-top:10px;
-    display:block;
     color:#D9A441;
-    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:5px;
+    display:block;
 }
 
 .form-control{
     background:#2A170C !important;
     border:2px solid #8B5E3C !important;
-    color:#F5E6CA !important;
+    color:#FFF4D6 !important;
 }
 
 .form-control::placeholder{
-    color:#bfae96;
+    color:#F5E6CA !important;
+    opacity:1;
 }
 
 .form-control:focus{
-    box-shadow:0 0 10px rgba(217,164,65,.4) !important;
     border-color:#D9A441 !important;
+    box-shadow:0 0 10px rgba(217,164,65,.4) !important;
+}
+
+.status{
+    margin-top:25px;
+    padding:20px;
+    background:#2A170C;
+    border:2px solid #8B5E3C;
+    border-radius:12px;
+}
+
+#pontos-restantes{
+    text-align:center;
+    color:#D9A441;
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.status div{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin:15px 0;
+}
+
+.status span{
+    color:#F5E6CA;
+    min-width:120px;
+    text-align:center;
+}
+
+.btn-inc,
+.btn-dec{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:#D9A441;
+    color:#2A170C;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-inc:hover,
+.btn-dec:hover{
+    background:#f0bc58;
+    transform:scale(1.1);
+}
+
+#btn-confirmar,
+button[type="submit"]{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#D9A441;
+    color:#2A170C;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#btn-confirmar:hover,
+button[type="submit"]:hover{
+    background:#f0bc58;
+}
+
+footer{
+    margin-top:60px;
+    padding:25px;
+    text-align:center;
+    background:#2A170C;
+    border-top:3px solid #8B5E3C;
+}
+
+.card-footer{
+    background:none !important;
+    border:none !important;
+}
+
+.card-footer p{
+    color:#D8C3A5;
+}
+
+@media(max-width:768px){
+
+    header{
+        padding-top:120px;
+    }
+
+    header h1{
+        font-size:2.4rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    #Form{
+        padding:15px;
+    }
+
+    form{
+        padding:20px;
+    }
+
+    .status div{
+        gap:10px;
+    }
+
+    .status span{
+        min-width:80px;
+        font-size:.95rem;
+    }
+
+}
+
+@media(max-width:576px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    .btn-inc,
+    .btn-dec{
+        width:35px;
+        height:35px;
+    }
+
+    .status span{
+        min-width:70px;
+        font-size:.9rem;
+    }
+
 }
