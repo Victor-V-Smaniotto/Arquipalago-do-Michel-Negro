@@ -1,22 +1,24 @@
 const formulario = document.querySelector("#formulario");
-const listaUsers = document.querySelector("#lista-users");
+const listaMissoes = document.querySelector("#lista-missoes");
 
 formulario.addEventListener("submit", () => {
     event.preventDefault();
 
-    const user = {
+    const missao = {
         nome: document.querySelector("#nome").value,
-        raca: document.querySelector("#raca").value,
-        fraqueza: document.querySelector("#fraqueza").value,
+        descricao: document.querySelector("#descricao").value,
+        perigo: document.querySelector("#perigo").value,
         localizacao: document.querySelector("#localizacao").value,
+        recompensa: document.querySelector("#recompensa").value,
     };
 
-        listaUsers.innerHTML += `
+        listaMissoes.innerHTML += `
         <div class="card mt-3 p-3">
-            <h3>${user.nome}</h3>
-            <p>Raça: ${user.raca}</p>
-            <p>fraqueza: ${user.fraqueza}</p>
-            <p>localização: ${user.localizacao}</p>
+            <h5>${missao.nome}</h3>
+            <p>: ${missao.descricao}</p>
+            <h6>Raça: ${missao.perigo}</p>
+            <h6>fraqueza: ${missao.localizacao}</p>
+            <h6>localização: ${missao.recompensa}</p>
         </div>
     `;
     formulario.reset();

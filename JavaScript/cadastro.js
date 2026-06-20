@@ -66,7 +66,7 @@ btn_inc.forEach(btn =>{
     })
 })
 
-formulario.addEventListener("submit", () => {
+formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const user = {
@@ -78,19 +78,27 @@ formulario.addEventListener("submit", () => {
         inteligencia: Number(document.querySelector("#val-inteligencia").textContent)
     };
 
-        listaUsers.innerHTML += `
-        <div class="card mt-3 p-3">
-            <h3>${user.nome}</h3>
-            <p>Raça: ${user.raca}</p>
-            <p>Classe: ${user.classe}</p>
-            <p>Força: ${user.forca}</p>
-            <p>agilidadde: ${user.velocidade}</p>
-            <p>inteligencia: ${user.inteligencia}</p>
-        </div>
+    const personagens = JSON.parse(localStorage.getItem("personagens")) || [];
+
+    personagens.push(user);
+
+    localStorage.setItem("personagens", JSON.stringify(personagens));
+
+    listaUsers.innerHTML += `
+    <div class="card mt-3 p-3">
+        <h3>${user.nome}</h3>
+        <p>Raça: ${user.raca}</p>
+        <p>Classe: ${user.classe}</p>
+        <p>Força: ${user.forca}</p>
+        <p>agilidadde: ${user.velocidade}</p>
+        <p>inteligencia: ${user.inteligencia}</p>
+    </div>
     `;
     formulario.reset();
+
     pontoRestante = 10;
     pontosR.textContent = "Pontos restantes: 10";
+
     forca.textContent = 0;
     agi.textContent = 0;
     int.textContent = 0;

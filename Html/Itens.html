@@ -3,116 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armazém de Armas</title>
-    <link rel="stylesheet" href="/Css/styleItens.css">
+    <title>Missões</title>
+    <link rel="stylesheet" href="/Css/styleMissoes.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="container">
-              <a class="navbar-brand" href="#">Arquipélago do Michel Negro</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Html/index.html">Arquipélago do Michel Negro</a>
 
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse justify-content-end" id="menu">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="/Html/index.html">Inicio</a>            </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/Bestiario.html">Bestiario</a>     </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/Historias.html">Historias</a>     </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/Missoes.html">Missoes</a>         </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/catalogo.html">Catalogo</a>         </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
-              </ul>
-          </div>
-      </div>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/Html/index.html">Inicio</a>            </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Historias.html">Historias</a>     </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Bestiario.html">Bestiario</a>     </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Npcs.html">Npcs</a>               </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Missoes.html">Missoes</a>         </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Itens.html">Itens</a>         </li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
+                </ul>
+
+                <form id="catalogo" class="d-flex">
+                    <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Pesquisar no catálogo"
+                        id="pesquisa">
+                </form>
+            </div>
+        </div>
     </nav>
 
     <header>
-        <h1>Armazém Imperial</h1>
-        <h3>Artefatos lendários, armas ancestrais e relíquias forjadas nos confins do Arquipélago.</h3>
+        <h1>Quadro de missões</h1>
+        <h3>Honre nosso grande imperador Micheat e Elimine todo o mal do Arquipélago...</h3>
     </header>
-
-    <section class="container my-5">
-        <div class="row g-4">
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="../img/MichelTheEmperor.png" class="card-img-top" alt="Micheat">
-                    <div class="card-body">
-                        <h5 class="card-title">Micheat</h5>
-                        <p class="card-text">o abençoado pelo Vs Code</p>
-                        <div><span>Perigo: </span><strong>7/10</strong></div>
-                        <div><span>Fraqueza: </span><strong>Comentários ruins</strong></div>
-                        <div><span>Origem: </span><strong>Arquipélago</strong></div>
-                    </div>
+        <section class="mural">
+            <div class="Missao-card">
+            <div class="card h-100">
+                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <div class="card-body">
+                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
+                    <p class="card-text">A lenda</p>
+                    <div><span>Perigo: </span><strong>6/10</strong></div>
+                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
+                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
+                   </div>
                 </div>
             </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="../img/MichelTheEmperoro(TRUE FORM).png" class="card-img-top" alt="Micheat Furious">
-                    <div class="card-body">
-                        <h5 class="card-title">Micheat (Furious)</h5>
-                        <p class="card-text">Aquele que transcendeu as linguagens de programação</p>
-                        <div><span>Perigo: </span><strong>Undefined</strong></div>
-                        <div><span>Fraqueza: </span><strong>Conflito no Git</strong></div>
-                        <div><span>Origem: </span><strong>Lago Binário</strong></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="../img/ArthurMorganTheLegend.jpg" class="card-img-top" alt="Arthur Morgan">
-                    <div class="card-body">
-                        <h5 class="card-title">Arthur Morgan</h5>
-                        <p class="card-text">A lenda</p>
-                        <div><span>Perigo: </span><strong>9/10</strong></div>
-                        <div><span>Fraqueza: </span><strong>Tuberculose</strong></div>
-                        <div><span>Origem: </span><strong>Velho Oeste</strong></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="../img/DragãoDoSulArdente.webp" class="card-img-top" alt="Dragão do Sul Ardente">
-                    <div class="card-body">
-                        <h5 class="card-title">Khalian, Dragão do Sul Ardente</h5>
-                        <p class="card-text">Dragão Místico do Arquipélago</p>
-                        <div><span>Perigo: </span><strong>6/10</strong></div>
-                        <div><span>Fraqueza: </span><strong>Ambientes Frios</strong></div>
-                        <div><span>Origem: </span><strong>Nascido nas chamas do Sul do Arquipélago</strong></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
-                    <img src="../img/QuimeraDoDeserto.png" class="card-img-top" alt="Arthur Morgan">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                        <div><span>Perigo: </span><strong></strong></div>
-                        <div><span>Fraqueza: </span><strong></strong></div>
-                        <div><span>Origem: </span><strong></strong></div>
-                    </div>
-                </div>
-            </div>
-            
         </div>
-      </section>
+    </div>
 
-      <footer>
+            <div class="Missao-card">
+            <div class="card h-100">
+                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <div class="card-body">
+                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
+                    <p class="card-text">A lenda</p>
+                    <div><span>Perigo: </span><strong>6/10</strong></div>
+                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
+                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="Missao-card">
+            <div class="card h-100">
+                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <div class="card-body">
+                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
+                    <p class="card-text">A lenda</p>
+                    <div><span>Perigo: </span><strong>6/10</strong></div>
+                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
+                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <div class="Missao-card">
+            <div class="card h-100">
+                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <div class="card-body">
+                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
+                    <p class="card-text">A lenda</p>
+                    <div><span>Perigo: </span><strong>6/10</strong></div>
+                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
+                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <section id="lista-missoes"></section>
+    </section>
+
+
+    <section id="Form" class="was-validated">
+        <form id="formulario">
+            <label>Nome da missão:</label><br>
+            <input type="text" id="nome" class="form-control" placeholder="Insira o nome da missão" required>
+            <div class="invalid-feedback">Insira o nome da missão </div>
+
+            <label>Descrição da missão:</label><br>
+            <input type="text" id="descricao" class="form-control" placeholder="Insira a descrição da missão" required>
+            <div class="invalid-feedback">Insira a descrição da missão </div>
+
+            <label>Perigo da missão:</label><br>
+            <select id="perigo" class="form-select" required>
+                <option value="" selected disabled>Selecione o perigo da missão</option>
+                <option>1/10</option>
+                <option>2/10</option>
+                <option>3/10</option>
+                <option>4/10</option>
+                <option>5/10</option>
+                <option>6/10</option>
+                <option>7/10</option>
+                <option>8/10</option>
+                <option>9/10</option>
+                <option>10/10</option>
+                <option>Undefined</option>
+            </select>
+            <div class="invalid-feedback">Insira a descrição da missão </div>
+
+            <label>Localização:</label><br>
+            <select id="localizacao" class="form-select" required>
+                <option value="" selected disabled>Selecione a localização da missão</option>
+                <option>Oeste Sombrio</option>
+                <option>Norte Escaldante</option>
+                <option>Sul Ardente</option>
+                <option>Leste Congelado</option>
+            </select>
+            <div class="invalid-feedback">Insira a localização da missão </div>
+            
+            <label>Recompensa:</label><br>
+            <input type="text" id="recompensa" class="form-control" placeholder="Insira a recompensa da missão" required>
+            <div class="invalid-feedback">Insira a recompensa da missão </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
             <div class="card-footer text-body-secondary">
                 <p><strong>2026 © Victor Vailões Smaniotto - Enzo Pietro Boeira - Augusto Cezar Morgenstern Schaefer</strong></p>
             </div>
       </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../JavaScript/missoes.js"></script>
     
 </body>
 </html>
