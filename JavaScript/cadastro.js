@@ -66,21 +66,6 @@ btn_inc.forEach(btn =>{
     })
 })
 
-const personagensSalvos = JSON.parse(localStorage.getItem("personagens")) || [];
-
-personagensSalvos.forEach(user => {
-    listaUsers.innerHTML += `
-    <div class="card mt-3 p-3">
-        <h3>${user.nome}</h3>
-        <p>Raça: ${user.raca}</p>
-        <p>Classe: ${user.classe}</p>
-        <p>Força: ${user.forca}</p>
-        <p>Agilidade: ${user.velocidade}</p>
-        <p>Inteligência: ${user.inteligencia}</p>
-    </div>
-    `;
-});
-
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -102,11 +87,11 @@ formulario.addEventListener("submit", (event) => {
     listaUsers.innerHTML += `
     <div class="card mt-3 p-3">
         <h3>${user.nome}</h3>
-        <p>Raça: ${user.raca}</p>
-        <p>Classe: ${user.classe}</p>
-        <p>Força: ${user.forca}</p>
-        <p>Agilidade: ${user.velocidade}</p>
-        <p>Inteligência: ${user.inteligencia}</p>
+        <h4>Raça: ${user.raca}</h4>
+        <h4>Classe: ${user.classe}</h4>
+        <h4>Força: ${user.forca}</h4>
+        <h4>Agilidade: ${user.velocidade}</h4>
+        <h4>Inteligência: ${user.inteligencia}</h4>
     </div>
     `;
     formulario.reset();
