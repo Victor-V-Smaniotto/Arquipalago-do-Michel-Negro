@@ -1,33 +1,55 @@
 const pesquisa = document.querySelector("#pesquisa");
 const resultado = document.querySelector("#resultadoPesquisa");
+const contador = document.querySelector("#contadorItens");
+const semResultado = document.querySelector("#semResultado");
 
 const paginas = [
-    { nome: "Bestiário", caminho: "/Html/Bestiario.html" },
-    { nome: "NPCs", caminho: "/Html/Npcs.html" },
-    { nome: "Itens", caminho: "/Html/Itens.html" },
-    { nome: "Missões", caminho: "/Html/Missoes.html" },
-    { nome: "Histórias", caminho: "/Html/Historias.html" }
+    "/Html/Bestiario.html",
+    "/Html/Npcs.html",
+    "/Html/Itens.html",
+    "/Html/Missoes.html",
+    "/Html/Historias.html"
 ];
 
-if (pesquisa && resultado) {
+if (pesquisa && resultado && contador && semResultado) {
     pesquisa.addEventListener("input", () => {
         const texto = pesquisa.value.toLowerCase();
+
         resultado.innerHTML = "";
+        contador.textContent = "Itens exibidos: 0";
+        semResultado.classList.add("d-none");
 
         if (texto === "") {
             return;
         }
 
+        let total = 0;
+
         paginas.forEach((pagina) => {
-            fetch(pagina.caminho)
+            fetch(pagina)
                 .then((resposta) => resposta.text())
                 .then((html) => {
-                    if (html.toLowerCase().includes(texto)) {
-                        resultado.innerHTML += `
-                            <a href="${pagina.caminho}" class="d-block">
-                                Resultado encontrado em ${pagina.nome}
-                            </a>
-                        `;
+                    const documento = new DOMParser().parseFromString(html, "text/html");
+                    const cards = documento.querySelectorAll(".card[id]");
+
+                    cards.forEach((card) => {
+                        const titulo = card.querySelector(".card-title");
+
+                        if (titulo && titulo.textContent.toLowerCase().includes(texto)) {
+                            total++;
+
+                            resultado.innerHTML += `
+                                <a href="${pagina}#${card.id}" class="d-block">
+                                    ${titulo.textContent}
+                                </a>
+                            `;
+
+                            contador.textContent = `Itens exibidos: ${total}`;
+                        }
+                    });
+
+                    if (total === 0) {
+                        semResultado.classList.remove("d-none");
                     }
                 });
         });
