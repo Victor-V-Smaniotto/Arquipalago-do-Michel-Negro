@@ -8,85 +8,40 @@
 
 body{
     min-height:100vh;
-    display:flex;
-    flex-direction:column;
     font-family:'MedievalSharp', cursive;
-    background-image:url("../img/medieval-tavern-wood-stockcake.webp");
+    background:url("../imagens/img/medieval-tavern-wood-stockcake.webp");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    color:#F5E6CA;
-    animation: portal 1.2s ease-out;
-}
-
-.navbar{
-    background:#2A170C !important;
-    border-bottom:3px solid #8B5E3C;
-    box-shadow:0 4px 15px rgba(0,0,0,.5);
-}
-
-.navbar-brand{
-    color:#D9A441 !important;
-    font-size:1.5rem;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.navbar-brand:hover{
-    color:#f0bc58 !important;
-}
-
-.nav-link{
-    color:#F5E6CA !important;
-    transition:.3s;
-    margin-left:10px;
-}
-
-.nav-link:hover{
-    color:#D9A441 !important;
-    text-shadow:0 0 8px rgba(217,164,65,.6);
-}
-
-.navbar-toggler{
-    border:2px solid #8B5E3C !important;
-}
-
-.navbar-toggler:focus{
-    box-shadow:none !important;
+    animation:portal 1.2s ease-out;
 }
 
 header{
     text-align:center;
-    padding:120px 20px 50px;
+    padding:90px 20px 40px;
 }
 
 header h1{
-    color:#D9A441;
     font-size:4rem;
-    margin-bottom:15px;
-    text-shadow:
-    0 0 10px rgba(217,164,65,.6),
-    0 0 20px rgba(217,164,65,.3);
+    color:#D9A441;
+    text-shadow:0 0 15px rgba(217,164,65,.5);
 }
 
-header h3{
-    color:#E8DCC4;
-    max-width:900px;
+.mural{
+    width:95%;
     margin:auto;
-    font-size:1.3rem;
-    text-shadow:0 0 8px rgba(0,0,0,.5);
-}
-
-.container{
-    flex:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:20px;
 }
 
 .card{
     background:#4B2E1E !important;
-    color:#F5E6CA !important;
     border:3px solid #8B5E3C !important;
     border-radius:15px !important;
     overflow:hidden;
+    color:#F5E6CA !important;
     transition:.3s;
     box-shadow:0 8px 20px rgba(0,0,0,.5);
 }
@@ -98,10 +53,10 @@ header h3{
 
 .card-img-top{
     width:100%;
-    height:320px;
+    height:420px;
     object-fit:contain;
-    padding:15px;
     background:rgba(0,0,0,.15);
+    padding:10px;
 }
 
 .card-body{
@@ -112,39 +67,25 @@ header h3{
     color:#D9A441;
     text-align:center;
     font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.card-subtitle{
+    color:#f0bc58;
     margin-bottom:10px;
 }
 
 .card-text{
-    text-align:center;
-    color:#E8DCC4;
-    margin-bottom:15px;
-}
-
-.card-body div{
-    padding:10px 0;
-    border-bottom:1px solid rgba(245,230,202,.15);
-}
-
-.card-body div:last-child{
-    border-bottom:none;
-}
-
-.card-body span{
-    color:#D8C3A5;
-}
-
-.card-body strong{
     color:#F5E6CA;
+    line-height:1.5;
 }
 
 footer{
-    margin-top:60px;
+    margin-top:50px;
     padding:25px;
     text-align:center;
     background:#2A170C;
     border-top:3px solid #8B5E3C;
-    box-shadow:0 -4px 15px rgba(0,0,0,.5);
 }
 
 footer p{
@@ -160,32 +101,15 @@ footer p{
 @keyframes portal{
     0%{
         opacity:0;
-        transform:scale(1.15);
-        filter:blur(20px) brightness(2);
-    }
-
-    50%{
-        opacity:.7;
-        filter:blur(8px) brightness(1.5);
+        transform:scale(1.1);
+        filter:blur(15px);
     }
 
     100%{
         opacity:1;
         transform:scale(1);
-        filter:blur(0) brightness(1);
+        filter:blur(0);
     }
-}
-
-@media(max-width:1200px){
-
-    header h1{
-        font-size:3.5rem;
-    }
-
-    .card-img-top{
-        height:280px;
-    }
-
 }
 
 @media(max-width:992px){
@@ -194,86 +118,59 @@ footer p{
         font-size:3rem;
     }
 
-    header h3{
-        font-size:1.15rem;
-    }
-
     .card-img-top{
-        height:250px;
+        height:350px;
     }
-
-    .card-title{
-        font-size:1.3rem;
-    }
-
 }
 
 @media(max-width:768px){
-
-    header{
-        padding:100px 15px 40px;
-    }
 
     header h1{
         font-size:2.5rem;
     }
 
-    header h3{
-        font-size:1rem;
+    .mural{
+        grid-template-columns:1fr 1fr;
     }
 
     .card-img-top{
-        height:220px;
+        height:300px;
     }
-
-    .card-body{
-        padding:15px;
-    }
-
 }
 
 @media(max-width:576px){
+
+    .mural{
+        grid-template-columns:1fr;
+    }
 
     header h1{
         font-size:2rem;
     }
 
-    header h3{
-        font-size:.9rem;
-    }
-
     .card-img-top{
-        height:200px;
+        height:250px;
     }
-
-    .card-title{
-        font-size:1.1rem;
-    }
-
-    .card-text,
-    .card-body span,
-    .card-body strong{
-        font-size:.9rem;
-    }
-
 }
 
-@media(max-width:400px){
+#catalogo{
+    margin-left:15px;
+}
 
-    header h1{
-        font-size:1.7rem;
-    }
+#pesquisa{
+    width:200px;
+    height:35px;
 
-    header h3{
-        font-size:.8rem;
-    }
+    background:#3b1f11;
+    border:1px solid #a56a3d;
+    border-radius:5px;
 
-    .card-img-top{
-        height:180px;
-    }
+    color:#f5e6ca;
+    font-size:0.9rem;
 
-    footer p{
-        font-size:.8rem;
-    }
+    padding:4px 10px;
+}
 
+#pesquisa::placeholder{
+    color:#d8c3a5;
 }

@@ -8,7 +8,7 @@
 
 body{
     min-height:100vh;
-    background-image:url("../img/medieval-tavern-wood-stockcake.webp");
+    background-image:url("../imagens/img/medieval-tavern-wood-stockcake.webp");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
@@ -122,9 +122,9 @@ header h2{
 .card-img-top{
     width:100%;
     height:300px;
-    object-fit:cover;
-    padding:15px;
-    background:rgba(0,0,0,.15);
+    object-fit:contain;
+    background:rgba(0,0,0,.25);
+    padding:10px;
 }
 
 .card-body{
@@ -253,4 +253,26 @@ footer p{
     .navbar-brand{
         font-size:1.1rem;
     }
+}
+
+#catalogo{
+    margin-left:15px;
+}
+
+#pesquisa{
+    width:200px;
+    height:35px;
+
+    background:#3b1f11;
+    border:1px solid #a56a3d;
+    border-radius:5px;
+
+    color:#f5e6ca;
+    font-size:0.9rem;
+
+    padding:4px 10px;
+}
+
+#pesquisa::placeholder{
+    color:#d8c3a5;
 }

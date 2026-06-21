@@ -8,13 +8,12 @@
 
 body{
     min-height:100vh;
-    font-family:'MedievalSharp', cursive;
     background-image:url("../imagens/img/medieval-tavern-wood-stockcake.webp");
     background-size:cover;
     background-position:center;
     background-attachment:fixed;
-    color:#F5E6CA;
-    animation: portal 1.2s ease-out;
+    animation:portal 1.2s ease-out;
+    padding-top:90px;
 }
 
 .navbar{
@@ -45,48 +44,35 @@ body{
     text-shadow:0 0 8px rgba(217,164,65,.6);
 }
 
-.navbar-toggler{
-    border:2px solid #8B5E3C !important;
-}
-
-.navbar-toggler:focus{
-    box-shadow:none !important;
-}
-
 header{
     text-align:center;
-    padding:120px 20px 50px;
+    padding:50px 20px;
 }
 
 header h1{
-    font-size:4rem;
     color:#D9A441;
-    margin-bottom:15px;
+    font-size:4rem;
     text-shadow:
     0 0 10px rgba(217,164,65,.6),
     0 0 20px rgba(217,164,65,.3);
 }
 
 header h3{
-    color:#E8DCC4;
-    font-size:1.4rem;
-    max-width:800px;
-    margin:auto;
-    text-shadow:0 0 8px rgba(0,0,0,.5);
+    color:#D8C3A5;
+    margin-top:10px;
 }
 
 .mural{
     width:95%;
-    max-width:1400px;
-    margin:0 auto 60px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
 }
 
-.Missao-card{
-    width:100%;
+.Item-card{
+    width:320px;
 }
 
 .card{
@@ -97,7 +83,6 @@ header h3{
     overflow:hidden;
     transition:.3s;
     box-shadow:0 8px 20px rgba(0,0,0,.5);
-    height:100%;
 }
 
 .card:hover{
@@ -107,10 +92,13 @@ header h3{
 
 .card-img-top{
     width:100%;
-    height:280px;
-    object-fit:contain;
-    background:rgba(0,0,0,.15);
-    padding:10px;
+    height:260px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card:hover .card-img-top{
+    transform:scale(1.05);
 }
 
 .card-body{
@@ -119,33 +107,56 @@ header h3{
 
 .card-title{
     color:#D9A441;
-    font-size:1.3rem;
     text-align:center;
-    margin-bottom:10px;
-    line-height:1.4;
 }
 
-.card-text{
-    text-align:center;
+.card-subtitle{
+    color:#f0bc58;
+    margin:10px 0;
+}
+
+.descricao,
+.comoPegar{
     color:#E8DCC4;
-    margin-bottom:15px;
 }
 
-.card-body div{
-    padding:10px 0;
-    border-bottom:1px solid rgba(245,230,202,.15);
-}
-
-.card-body div:last-child{
-    border-bottom:none;
-}
-
-.card-body span{
-    color:#D8C3A5;
-}
-
-.card-body strong{
+#Form{
+    max-width:800px;
+    margin:60px auto;
+    padding:30px;
+    background:rgba(42,23,12,.95);
+    border:3px solid #8B5E3C;
+    border-radius:15px;
     color:#F5E6CA;
+    box-shadow:0 8px 20px rgba(0,0,0,.5);
+}
+
+#Form label{
+    margin-top:15px;
+    color:#D9A441;
+}
+
+#Form input,
+#Form select{
+    margin-top:5px;
+    margin-bottom:10px;
+}
+
+#Form button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#D9A441;
+    color:#2A170C;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#Form button:hover{
+    background:#f0bc58;
+    transform:scale(1.03);
 }
 
 footer{
@@ -154,105 +165,16 @@ footer{
     text-align:center;
     background:#2A170C;
     border-top:3px solid #8B5E3C;
-    box-shadow:0 -4px 15px rgba(0,0,0,.5);
 }
 
 footer p{
-    margin:0;
     color:#D8C3A5;
-    font-size:1rem;
+    margin:0;
 }
 
 .card-footer{
     background:none !important;
     border:none !important;
-    color:#D8C3A5 !important;
-}
-
-#lista-users{
-    width:90%;
-    max-width:1400px;
-    margin:40px auto;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
-}
-
-#lista-users .card{
-    width:320px;
-    background:#4B2E1E;
-    color:#F5E6CA;
-    border:3px solid #8B5E3C;
-    border-radius:15px;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.5);
-    transition:.3s;
-}
-
-#lista-users .card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 0 25px rgba(217,164,65,.4);
-}
-
-#lista-users .card h3{
-    color:#D9A441;
-    font-size:2rem;
-    margin-bottom:20px;
-    text-shadow:0 0 10px rgba(217,164,65,.4);
-}
-
-#lista-users .card p{
-    font-size:1.1rem;
-    margin:12px 0;
-    color:#E8DCC4;
-    font-weight:600;
-}
-
-#lista-users .card strong{
-    color:#F5E6CA;
-}
-
-@media(max-width:992px){
-
-    #lista-users .card{
-        width:280px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    #lista-users{
-        gap:20px;
-    }
-
-    #lista-users .card{
-        width:90%;
-        max-width:400px;
-    }
-
-    #lista-users .card h3{
-        font-size:1.7rem;
-    }
-
-}
-
-@media(max-width:576px){
-
-    #lista-users .card{
-        width:100%;
-    }
-
-    #lista-users .card h3{
-        font-size:1.4rem;
-    }
-
-    #lista-users .card p{
-        font-size:1rem;
-    }
-
 }
 
 @keyframes portal{
@@ -274,23 +196,7 @@ footer p{
     }
 }
 
-@media(max-width:1200px){
-
-    .mural{
-        grid-template-columns:repeat(3,1fr);
-    }
-
-    header h1{
-        font-size:3.5rem;
-    }
-
-}
-
 @media(max-width:992px){
-
-    .mural{
-        grid-template-columns:repeat(2,1fr);
-    }
 
     header h1{
         font-size:3rem;
@@ -299,18 +205,9 @@ footer p{
     header h3{
         font-size:1.2rem;
     }
-
-    .card-img-top{
-        height:240px;
-    }
-
 }
 
 @media(max-width:768px){
-
-    header{
-        padding:100px 15px 40px;
-    }
 
     header h1{
         font-size:2.5rem;
@@ -320,132 +217,58 @@ footer p{
         font-size:1rem;
     }
 
-    .mural{
-        grid-template-columns:repeat(2,1fr);
-        gap:15px;
+    .Item-card{
+        width:100%;
+        max-width:350px;
     }
 
     .card-img-top{
         height:220px;
     }
 
-    .card-title{
-        font-size:1.15rem;
+    #Form{
+        width:95%;
+        padding:20px;
     }
-
 }
 
 @media(max-width:576px){
-
-    .navbar-brand{
-        font-size:1.1rem;
-    }
-
-    .mural{
-        grid-template-columns:1fr;
-    }
 
     header h1{
         font-size:2rem;
     }
 
-    header h3{
-        font-size:.9rem;
-    }
-
-    .card-img-top{
-        height:200px;
-    }
-
-    .card-title{
+    .navbar-brand{
         font-size:1.1rem;
-    }
-
-}
-
-@media(max-width:400px){
-
-    header h1{
-        font-size:1.7rem;
-    }
-
-    header h3{
-        font-size:.8rem;
     }
 
     .card-img-top{
         height:180px;
     }
 
-    .card-title{
-        font-size:1rem;
+    #Form button{
+        width:100%;
     }
-
-    .card-text,
-    .card-body span,
-    .card-body strong{
-        font-size:.9rem;
-    }
-
 }
 
-#Form{
-    max-width: 900px;
-    margin: 0 auto;
+#catalogo{
+    margin-left:15px;
 }
 
-form{
-    background: rgba(42,23,12,.9);
-    padding: 35px;
-    border: 3px solid #8B5E3C;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0,0,0,.6);
+#pesquisa{
+    width:200px;
+    height:35px;
+
+    background:#3b1f11;
+    border:1px solid #a56a3d;
+    border-radius:5px;
+
+    color:#f5e6ca;
+    font-size:0.9rem;
+
+    padding:4px 10px;
 }
 
-label{
-    display:block;
-    margin-top:15px;
-    margin-bottom:5px;
-    color:#D9A441;
-    font-size:1.3rem;
-    font-weight:bold;
-}
-
-.form-control{
-    background:#4B2E1E !important;
-    border:2px solid #8B5E3C !important;
-    color:#F5E6CA !important;
-    font-size:1.2rem;
-    padding:12px;
-}
-
-.form-control::placeholder{
-    color:#E8DCC4 !important;
-}
-
-.form-control:focus{
-    background:#4B2E1E !important;
-    color:#F5E6CA !important;
-    border-color:#D9A441 !important;
-    box-shadow:0 0 15px rgba(217,164,65,.5) !important;
-}
-
-.invalid-feedback{
-    color:#ff6b6b !important;
-    font-size:1rem;
-}
-
-button[type="submit"]{
-    margin-top:25px;
-    padding:12px 30px;
-    background:#D9A441;
-    color:#2A170C;
-    border:none;
-    border-radius:8px;
-    font-weight:bold;
-    font-size:1.1rem;
-}
-
-button[type="submit"]:hover{
-    background:#f0bc58;
+#pesquisa::placeholder{
+    color:#d8c3a5;
 }
