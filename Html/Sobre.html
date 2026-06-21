@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="/Css/styleSobre.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Html/index.html">Arquipélago do Michel Negro</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/Html/index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Historias.html">Historias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Bestiario.html">Bestiario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Npcs.html">Npcs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Missoes.html">Missoes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Itens.html">Itens</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/Html/Sobre.html">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a></li>
+                </ul>
+
+                <form id="catalogo" class="d-flex">
+                    <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Pesquisar no catálogo"
+                        id="pesquisa">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Sobre o Projeto</h1>
+        <p>Conheça a ideia, os criadores e as tecnologias usadas no Arquipélago do Michel Negro.</p>
+    </header>
+
+    <main>
+        <section class="sobre-container">
+            <h2>Contexto narrativo</h2>
+
+            <p>
+                O Arquipélago do Michel Negro é um universo de fantasia inspirado em aventuras de RPG,
+                onde ilhas misteriosas guardam monstros, personagens, missões e itens raros. Cada região
+                possui seus próprios perigos, histórias e segredos, criando um mundo feito para exploração
+                e descoberta.
+            </p>
+
+            <p>
+                O site funciona como um catálogo desse universo, reunindo informações importantes sobre
+                criaturas, NPCs, histórias, missões e equipamentos. A proposta é facilitar a consulta dos
+                jogadores e visitantes, mostrando de forma organizada tudo que compõe o arquipélago.
+            </p>
+
+            <p>
+                Além da parte narrativa, o projeto também representa o desenvolvimento prático de uma
+                aplicação web construída com HTML, CSS, JavaScript e Bootstrap.
+            </p>
+        </section>
+
+        <section class="integrantes-container">
+            <h2>Integrantes</h2>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="integrante-card">
+                        <div class="foto-placeholder">VS</div>
+                        <h3>Victor Vailões Smaniotto</h3>
+                        <p>Desenvolvimento front-end e organização do catálogo.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="integrante-card">
+                        <div class="foto-placeholder">EP</div>
+                        <h3>Enzo Pietro Boeira</h3>
+                        <p>Criação de conteúdo, personagens e elementos do universo.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="integrante-card">
+                        <div class="foto-placeholder">AM</div>
+                        <h3>Augusto Cezar Morgenstern Schaefer</h3>
+                        <p>Narrativa, revisão e ideias para histórias e missões.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-container">
+            <h2>Repositório</h2>
+            <a class="btn btn-warning" href="https://github.com/Victor-V-Smaniotto/Arquipalago-do-Michel-Negro" target="_blank" rel="noopener">
+                Ver projeto no GitHub
+            </a>
+        </section>
+
+        <section class="info-container">
+            <h2>Tecnologias utilizadas</h2>
+
+            <div class="badges-tecnologias">
+                <span class="badge text-bg-danger">HTML5</span>
+                <span class="badge text-bg-primary">CSS3</span>
+                <span class="badge text-bg-warning">JavaScript</span>
+                <span class="badge text-bg-info">Bootstrap</span>
+                <span class="badge text-bg-dark">GitHub</span>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="card-footer text-body-secondary">
+            <p><strong>2026 © Victor Vailões Smaniotto - Enzo Pietro Boeira - Augusto Cezar Morgenstern Schaefer</strong></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
