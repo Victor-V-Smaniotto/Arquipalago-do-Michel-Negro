@@ -22,7 +22,7 @@ formulario.addEventListener("submit", (event) => {
         listaMissoes.innerHTML += `
         <div class="card mt-3 p-3">
             <img src="${missao.monstro}" alt="Imagem do monstro" class="img-fluid">
-            <h5>Nome:${missao.nome}</h5>
+            <h5>Nome: ${missao.nome}</h5>
             <p>Descrição: ${missao.descricao}</p>
             <h6>Perigo: ${missao.perigo}</h6>
             <h6>Localização: ${missao.localizacao}</h6>
