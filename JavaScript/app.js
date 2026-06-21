@@ -8,6 +8,7 @@ const paginas = [
     { nome: "Missões", caminho: "/Html/Missoes.html" },
     { nome: "Histórias", caminho: "/Html/Historias.html" }
 ];
+
 if (pesquisa && resultado) {
     pesquisa.addEventListener("input", () => {
         const texto = pesquisa.value.toLowerCase();

@@ -29,13 +29,28 @@
                     <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                 </ul>
 
-                <form id="catalogo" class="d-flex">
+                <div class="container my-4">
                     <input
-                        class="form-control"
                         type="search"
-                        placeholder="Pesquisar no catálogo"
-                        id="pesquisa">
-                </form>
+                        id="pesquisa"
+                        class="form-control mb-3"
+                        placeholder="Pesquisar por nome">
+
+                    <select id="filtroCategoria" class="form-select mb-3">
+                        <option value="todos">Todas as categorias</option>
+                        <option value="monstro">Monstros</option>
+                        <option value="npc">NPCs</option>
+                        <option value="item">Itens</option>
+                        <option value="missao">Missões</option>
+                    </select>
+
+                    <p id="contadorItens">Itens exibidos: 0</p>
+
+                    <p id="semResultado" class="text-danger d-none">
+                        Nenhum resultado encontrado.
+                    </p>
+                </div>
+                
             </div>
         </div>
     </nav>
@@ -48,7 +63,7 @@
     <section class="mural">
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/espadaEmChama.png" class="card-img-top" alt="Espada em Chama">
                 <div class="card-body">
                     <h5 class="card-title">Espada em Chama</h5>
@@ -60,7 +75,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/ArcoSussurante.png" class="card-img-top" alt="Arco Sussurante">
                 <div class="card-body">
                     <h5 class="card-title">Arco Sussurante</h5>
@@ -72,7 +87,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/machadoDevorador.png" class="card-img-top" alt="Machado Devorador">
                 <div class="card-body">
                     <h5 class="card-title">Machado Devorador</h5>
@@ -84,7 +99,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/bastaoDoArconte.png" class="card-img-top" alt="Bastão do Arconte">
                 <div class="card-body">
                     <h5 class="card-title">Bastão do Arconte</h5>
@@ -96,7 +111,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/lancaAurora.png" class="card-img-top" alt="Lança Aurora">
                 <div class="card-body">
                     <h5 class="card-title">Lança Aurora</h5>
@@ -108,7 +123,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/adagaDoSilencio.png" class="card-img-top" alt="Adaga do Silêncio">
                 <div class="card-body">
                     <h5 class="card-title">Adaga do Silêncio</h5>
@@ -120,7 +135,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/marteloDoTrovao.png" class="card-img-top" alt="Martelo do Trovão">
                 <div class="card-body">
                     <h5 class="card-title">Martelo do Trovão</h5>
@@ -132,7 +147,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/espadaSangueReal.png" class="card-img-top" alt="Espada do Sangue Real">
                 <div class="card-body">
                     <h5 class="card-title">Espada do Sangue Real</h5>
@@ -144,7 +159,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/bestaSombraEterna.png" class="card-img-top" alt="Besta da Sombra Eterna">
                 <div class="card-body">
                     <h5 class="card-title">Besta da Sombra Eterna</h5>
@@ -156,7 +171,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/escudoDoJuramento.png" class="card-img-top" alt="Escudo do Juramento">
                 <div class="card-body">
                     <h5 class="card-title">Escudo do Juramento</h5>
@@ -168,7 +183,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/espadaEmChama.png" class="card-img-top" alt="Espada em Chama">
                 <div class="card-body">
                     <h5 class="card-title">Espada em Chama</h5>
@@ -180,7 +195,7 @@
         </div>
 
         <div class="Item-card">
-            <div class="card h-100">
+            <div class="card h-100" data-categoria="item">
                 <img src="../imagens/itens.img/img/espadaEmChama.png" class="card-img-top" alt="Espada em Chama">
                 <div class="card-body">
                     <h5 class="card-title">Espada em Chama</h5>

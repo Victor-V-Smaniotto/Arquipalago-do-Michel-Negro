@@ -29,13 +29,28 @@
                     <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                 </ul>
 
-                <form id="catalogo" class="d-flex">
+                <div class="container my-4">
                     <input
-                        class="form-control"
                         type="search"
-                        placeholder="Pesquisar no catálogo"
-                        id="pesquisa">
-                </form>
+                        id="pesquisa"
+                        class="form-control mb-3"
+                        placeholder="Pesquisar por nome">
+
+                    <select id="filtroCategoria" class="form-select mb-3">
+                        <option value="todos">Todas as categorias</option>
+                        <option value="monstro">Monstros</option>
+                        <option value="npc">NPCs</option>
+                        <option value="item">Itens</option>
+                        <option value="missao">Missões</option>
+                    </select>
+
+                    <p id="contadorItens">Itens exibidos: 0</p>
+
+                    <p id="semResultado" class="text-danger d-none">
+                        Nenhum resultado encontrado.
+                    </p>
+                </div>
+
             </div>
         </div>
     </nav>
@@ -138,7 +153,7 @@
         <div class="row g-4">
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/ArthurMorganTheLegend.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Arthur Morgan</h5>
@@ -151,7 +166,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/GuiaFantasma.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Elarion</h5>
@@ -164,7 +179,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Brann.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Brann Kord</h5>
@@ -177,7 +192,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Eco.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">O Eco</h5>
@@ -190,7 +205,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Nira.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Nira Solen</h5>
@@ -203,7 +218,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Darius.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Darius Vennor</h5>
@@ -216,7 +231,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Seraphine.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Seraphine Vale</h5>
@@ -229,7 +244,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="npc">
                     <img src="../imagens/npcs.img/img/Lyara.jpg" class="card-img-top" alt="Gordão">
                     <div class="card-body">
                         <h5 class="card-title">Lyara Venn</h5>

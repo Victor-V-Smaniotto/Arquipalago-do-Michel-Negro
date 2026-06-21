@@ -29,13 +29,28 @@
                 <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                 </ul>
 
-                <form id="catalogo" class="d-flex">
+                <div class="container my-4">
                     <input
-                        class="form-control"
                         type="search"
-                        placeholder="Pesquisar no catálogo"
-                        id="pesquisa">
-                </form>
+                        id="pesquisa"
+                        class="form-control mb-3"
+                        placeholder="Pesquisar por nome">
+
+                    <select id="filtroCategoria" class="form-select mb-3">
+                        <option value="todos">Todas as categorias</option>
+                        <option value="monstro">Monstros</option>
+                        <option value="npc">NPCs</option>
+                        <option value="item">Itens</option>
+                        <option value="missao">Missões</option>
+                    </select>
+
+                    <p id="contadorItens">Itens exibidos: 0</p>
+
+                    <p id="semResultado" class="text-danger d-none">
+                        Nenhum resultado encontrado.
+                    </p>
+                </div>
+                
             </div>
         </div>
     </nav>
@@ -51,7 +66,7 @@
           <div class="row-g4">
 
             <div class="card-wrapper">
-              <div class="card h-100">
+              <div class="card h-100" data-categoria="historia">
                 <img src="../imagens/historia.img/img/leste-gelado.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo I - O Leste Gelado</h5>
@@ -141,7 +156,7 @@
             </div>
 
             <div class="card-wrapper">
-              <div class="card h-100">
+              <div class="card h-100" data-categoria="historia">
                 <img src="../imagens/historia.img/img/sul-ardente.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo II - O Sul Ardente</h5>
@@ -203,7 +218,7 @@
             </div>
 
             <div class="card-wrapper">
-              <div class="card h-100">
+              <div class="card h-100" data-categoria="historia">
                 <img src="../imagens/historia.img/img/Oeste-Sombrio.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo III - O Oeste Sombrio</h5>
@@ -266,7 +281,7 @@
             </div>
 
             <div class="card-wrapper">
-              <div class="card h-100">
+              <div class="card h-100" data-categoria="historia">
                 <img src="../imagens/historia.img/img/Norte-Escaldante.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo IV - O Norte Escaldante, a Guerra Final</h5>
