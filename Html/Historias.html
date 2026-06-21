@@ -9,26 +9,35 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Arquipélago do Michel Negro</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Html/index.html">Arquipélago do Michel Negro</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="menu">
-            <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="/Html/index.html">Inicio</a>            </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/Bestiario.html">Bestiario</a>     </li>
                 <li class="nav-item"><a class="nav-link" href="/Html/Historias.html">Historias</a>     </li>
+                <li class="nav-item"><a class="nav-link" href="/Html/Bestiario.html">Bestiario</a>     </li>
+                <li class="nav-item"><a class="nav-link" href="/Html/Npcs.html">Npcs</a>               </li>
                 <li class="nav-item"><a class="nav-link" href="/Html/Missoes.html">Missoes</a>         </li>
-                <li class="nav-item"><a class="nav-link" href="/Html/catalogo.html">Catalogo</a>         </li>
+                <li class="nav-item"><a class="nav-link" href="/Html/Itens.html">Itens</a>         </li>
                 <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
-            </ul>
+                </ul>
+
+                <form id="catalogo" class="d-flex">
+                    <input
+                        class="form-control"
+                        type="search"
+                        placeholder="Pesquisar no catálogo"
+                        id="pesquisa">
+                </form>
+            </div>
         </div>
-    </div>
-  </nav>
+    </nav>
 
     <header>
         <h1>
@@ -42,7 +51,7 @@
 
             <div class="card-wrapper">
               <div class="card h-100">
-                <img src="../img/Leste-Gelado.png" class="card-img-top" alt="Preto">
+                <img src="../imagens/historia.img/img/leste-gelado.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo I - O Leste Gelado</h5>
                   <p class="card-text">Muito além das florestas do Oeste Sombrio e dos desertos vulcânicos do Sul Ardente, existe uma região esquecida pela maioria dos aventureiros: o Leste Gelado.
@@ -132,7 +141,7 @@
 
             <div class="card-wrapper">
               <div class="card h-100">
-                <img src="../img/Sul-Ardente.png" class="card-img-top" alt="Preto">
+                <img src="../imagens/historia.img/img/sul-ardente.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo II - O Sul Ardente</h5>
                   <p class="card-text">Uma antiga ameaça desperta nas profundezas do Sul Ardente. Entre vulcões, rios de magma e desertos flamejantes, Khalian, o Dragão do Sul Ardente, deverá descobrir o que está consumindo o poder do Coração Flamejante antes que toda a região seja reduzida a cinzas.</p>
@@ -194,7 +203,7 @@
 
             <div class="card-wrapper">
               <div class="card h-100">
-                <img src="../img/Oeste-Sombrio.png" class="card-img-top" alt="Preto">
+                <img src="../imagens/historia.img/img/Oeste-Sombrio.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo III - O Oeste Sombrio</h5>
                   <p class="card-text">Uma estranha agitação toma conta do Oeste Sombrio. Enquanto almas desaparecem e os mortos deixam de obedecer ao Senhor das Almas, Morbis, o Errante, uma força esquecida desperta nas profundezas do Castelo Esquecido, ameaçando mergulhar todo o Arquipélago em uma noite eterna.</p>
@@ -257,7 +266,7 @@
 
             <div class="card-wrapper">
               <div class="card h-100">
-                <img src="../img/Norte-Escaldante.png" class="card-img-top" alt="Preto">
+                <img src="../imagens/historia.img/img/Norte-Escaldante.png" class="card-img-top" alt="Preto">
                 <div class="card-body">
                   <h5 class="card-title">Capítulo IV - O Norte Escaldante, a Guerra Final</h5>
                   <p class="card-text">Algo mudou em Micheat. Consumido por sua ambição, o Imperador do Arquipélago iniciou a criação de um código capaz de lhe conceder domínio sobre o mundo inteiro. Sabendo que nenhum ser vivo é capaz de enfrentá-lo sozinho, os guardiões dos quatro continentes terão que se unir para impedir o nascimento do Deus do Código.</p>

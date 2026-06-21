@@ -43,68 +43,58 @@
         <h1>Quadro de missões</h1>
         <h3>Honre nosso grande imperador Micheat e Elimine todo o mal do Arquipélago...</h3>
     </header>
-        <section class="mural">
-            <div class="Missao-card">
+
+    <section class="mural mural-de-missoes">
+
+        <div class="Item-card">
             <div class="card h-100">
-                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <img src="../imagens/bestiario.img/img/Mumia.jpg" class="card-img-top" alt="Mumia">
                 <div class="card-body">
-                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
-                    <p class="card-text">A lenda</p>
-                    <div><span>Perigo: </span><strong>6/10</strong></div>
-                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
-                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
-                   </div>
+                    <h5 class="card-title">Nome do monstro: Mumia</h5>
+                    <p class="card-text descricao">Encontrado no deserto.</p>
+                    <h6 class="card-subtitle">Perigo: 03/10</h6>
+                    <p class="card-text comoPegar">Uma espada lendária que brilha com chamas eternas.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-            <div class="Missao-card">
+        <div class="Item-card">
             <div class="card h-100">
-                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <img src="../imagens/bestiario.img/img/Mumia.jpg" class="card-img-top" alt="Mumia">
                 <div class="card-body">
-                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
-                    <p class="card-text">A lenda</p>
-                    <div><span>Perigo: </span><strong>6/10</strong></div>
-                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
-                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
-                   </div>
+                    <h5 class="card-title">Nome do monstro: Mumia</h5>
+                    <p class="card-text descricao">Encontrado no deserto.</p>
+                    <h6 class="card-subtitle">Perigo: 03/10</h6>
+                    <p class="card-text comoPegar">Uma espada lendária que brilha com chamas eternas.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-            <div class="Missao-card">
+        <div class="Item-card">
             <div class="card h-100">
-                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <img src="../imagens/bestiario.img/img/Mumia.jpg" class="card-img-top" alt="Mumia">
                 <div class="card-body">
-                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
-                    <p class="card-text">A lenda</p>
-                    <div><span>Perigo: </span><strong>6/10</strong></div>
-                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
-                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
-                   </div>
+                    <h5 class="card-title">Nome do monstro: Mumia</h5>
+                    <p class="card-text descricao">Encontrado no deserto.</p>
+                    <h6 class="card-subtitle">Perigo: 03/10</h6>
+                    <p class="card-text comoPegar">Uma espada lendária que brilha com chamas eternas.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-            <div class="Missao-card">
+        <div class="Item-card">
             <div class="card h-100">
-                <img src="../img/CentauroBoss.webp" class="card-img-top" alt="Arthur Morgan">
+                <img src="../imagens/bestiario.img/img/Mumia.jpg" class="card-img-top" alt="Mumia">
                 <div class="card-body">
-                    <h5 class="card-title">Tharok (chefe dos Centauros do norte)</h5>
-                    <p class="card-text">A lenda</p>
-                    <div><span>Perigo: </span><strong>6/10</strong></div>
-                    <div><span>Fraqueza: </span><strong>Terreno Ingrime</strong></div>
-                    <div><span>Recompensa: </span><strong>10.000 moedas de gold</strong></div>
-                   </div>
+                    <h5 class="card-title">Nome da missão: Mumia</h5>
+                    <p class="card-text descricao">Encontrado no deserto.</p>
+                    <h6 class="card-subtitle">Perigo: 03/10</h6>
+                    <p class="card-text comoPegar">Uma espada lendária que brilha com chamas eternas.</p>
                 </div>
             </div>
         </div>
-    </div>
 
-     <section id="lista-missoes"></section>
+        <section id="lista-missoes"></section>
     </section>
 
 
@@ -148,6 +138,26 @@
             <label>Recompensa:</label><br>
             <input type="text" id="recompensa" class="form-control" placeholder="Insira a recompensa da missão" required>
             <div class="invalid-feedback">Insira a recompensa da missão </div>
+
+            <label>Qual o monstro que irá caçar na missão:</label><br>
+            <select id="monstro" class="form-select" required>
+                <option value="" selected disabled>Selecione o monstro da missão                                           </option>
+                <option value="../imagens/bestiario.img/img/CentauroMob.jpg">Centauro                                          </option>
+                <option value="../imagens/bestiario.img/img/CentauroBoss.jpg">Centauro (Boss)                                  </option>
+                <option value="../imagens/bestiario.img/img/DragaoDoSulArdente.jpg">Dragão do Sul Ardente                      </option>
+                <option value="../imagens/bestiario.img/img/EsqueletoCoconut.jpg">Esqueleto Coconut                            </option>
+                <option value="../imagens/bestiario.img/img/FantasmaMiniBoss.jpg">Fantasma (Mini Boss)                         </option>
+                <option value="../imagens/bestiario.img/img/Gargula.jpg">Gargula                                               </option>
+                <option value="../imagens/bestiario.img/img/InfernoRastejanteBoss.jpg">Inferno Rastejante (Boss)               </option>
+                <option value="../imagens/bestiario.img/img/Mago.jpg">Mago                                                     </option>
+                <option value="../imagens/bestiario.img/img/MichelTheEmperor.jpg">Michel The Emperor (Boss)                    </option>
+                <option value="../imagens/bestiario.img/img/MichelTheEmperorTrueForm.jpg">Michel The Emperor True Form (Boss)  </option>
+                <option value="../imagens/bestiario.img/img/Minotauro.jpg">Minotauro                                           </option>
+                <option value="../imagens/bestiario.img/img/Mumia.jpg">Mumia                                                   </option>
+                <option value="../imagens/bestiario.img/img/QuimeraDoDeserto.jpg">Quimera do Deserto                           </option>
+                <option value="../imagens/bestiario.img/img/SkarVex.jpg">SkarVex                                               </option>
+            </select>
+            <div class="invalid-feedback">Insira a localização da missão </div>
 
             <button type="submit">Enviar</button>
         </form>

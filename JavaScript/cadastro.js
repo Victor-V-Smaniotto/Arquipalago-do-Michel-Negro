@@ -90,8 +90,8 @@ formulario.addEventListener("submit", (event) => {
         <p>Raça: ${user.raca}</p>
         <p>Classe: ${user.classe}</p>
         <p>Força: ${user.forca}</p>
-        <p>agilidadde: ${user.velocidade}</p>
-        <p>inteligencia: ${user.inteligencia}</p>
+        <p>Agilidade: ${user.velocidade}</p>
+        <p>Inteligência: ${user.inteligencia}</p>
     </div>
     `;
     formulario.reset();
