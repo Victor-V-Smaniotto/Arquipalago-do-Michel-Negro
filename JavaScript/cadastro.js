@@ -66,6 +66,21 @@ btn_inc.forEach(btn =>{
     })
 })
 
+const personagensSalvos = JSON.parse(localStorage.getItem("personagens")) || [];
+
+personagensSalvos.forEach(user => {
+    listaUsers.innerHTML += `
+    <div class="card mt-3 p-3">
+        <h3>${user.nome}</h3>
+        <p>Raça: ${user.raca}</p>
+        <p>Classe: ${user.classe}</p>
+        <p>Força: ${user.forca}</p>
+        <p>Agilidade: ${user.velocidade}</p>
+        <p>Inteligência: ${user.inteligencia}</p>
+    </div>
+    `;
+});
+
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 

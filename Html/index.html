@@ -32,15 +32,27 @@
                     <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                   </ul>
 
-                  <form id="catalogo" class="d-flex">
-                      <input
-                          class="form-control"
-                          type="search"
-                          placeholder="Pesquisar no catálogo"
-                          id="pesquisa">
-                  </form>
+                <div class="container my-4">
+                    <input
+                        type="search"
+                        id="pesquisa"
+                        class="form-control mb-3"
+                        placeholder="Pesquisar por nome">
 
-                  <div id="resultadoPesquisa"></div>
+                    <select id="filtroCategoria" class="form-select mb-3">
+                        <option value="todos">Todas as categorias</option>
+                        <option value="monstro">Monstros</option>
+                        <option value="npc">NPCs</option>
+                        <option value="item">Itens</option>
+                        <option value="missao">Missões</option>
+                    </select>
+
+                    <p id="contadorItens">Itens exibidos: 0</p>
+
+                    <p id="semResultado" class="text-danger d-none">
+                        Nenhum resultado encontrado.
+                    </p>
+                </div>
 
               </div>
           </div>

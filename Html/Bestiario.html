@@ -29,15 +29,27 @@
                   <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                 </ul>
 
-                <form id="catalogo" class="d-flex">
+                <div class="container my-4">
                     <input
-                        class="form-control"
                         type="search"
-                        placeholder="Pesquisar no catálogo"
-                        id="pesquisa">
-                </form>
+                        id="pesquisa"
+                        class="form-control mb-3"
+                        placeholder="Pesquisar por nome">
 
-                  <div id="resultadoPesquisa"></div>
+                    <select id="filtroCategoria" class="form-select mb-3">
+                        <option value="todos">Todas as categorias</option>
+                        <option value="monstro">Monstros</option>
+                        <option value="npc">NPCs</option>
+                        <option value="item">Itens</option>
+                        <option value="missao">Missões</option>
+                    </select>
+
+                    <p id="contadorItens">Itens exibidos: 0</p>
+
+                    <p id="semResultado" class="text-danger d-none">
+                        Nenhum resultado encontrado.
+                    </p>
+                </div>
                   
             </div>
         </div>
@@ -175,7 +187,7 @@
         <div class="row g-4">
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/MichelTheEmperor.jpg" class="card-img-top" alt="Micheat">
                     <div class="card-body">
                         <h5 class="card-title">Micheat</h5>
@@ -188,7 +200,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/MichelTheEmperorTrueForm.jpg" class="card-img-top" alt="Micheat Furious">
                     <div class="card-body">
                         <h5 class="card-title">Micheat (Furious)</h5>
@@ -201,7 +213,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/DragaoDoSulArdente.jpg" class="card-img-top" alt="Dragão do Sul Ardente">
                     <div class="card-body">
                         <h5 class="card-title">Khalian, Dragão do Sul Ardente</h5>
@@ -214,7 +226,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/QuimeraDoDeserto.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Quimera, Protetora da Fronteira</h5>
@@ -227,7 +239,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/CentauroMob.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Centauros</h5>
@@ -240,7 +252,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/Mago.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Magos</h5>
@@ -253,7 +265,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/InfernoRastejanteBoss.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Ragnarokh, O Inferno Rastejante</h5>
@@ -266,7 +278,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/esqueletoCoconut.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Esqueletos da praia do Oeste</h5>
@@ -279,7 +291,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/FantasmaMiniBoss.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Morbis, O Errante</h5>
@@ -292,7 +304,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/Mumia.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Mumias, são os mortos vivos do Norte Escaldante do Arquipélago</h5>
@@ -305,7 +317,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/Gargula.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Gargulas</h5>
@@ -318,7 +330,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/Minotauro.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Minotauros</h5>
@@ -331,7 +343,7 @@
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/SkarVex.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Skarvex, Lobos das Cinzas</h5>
@@ -343,7 +355,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100">
+                <div class="card h-100" data-categoria="monstro">
                     <img src="../imagens/bestiario.img/img/CentauroBoss.jpg" class="card-img-top" alt="Arthur Morgan">
                     <div class="card-body">
                         <h5 class="card-title">Tharok, Chefe dos Centauros do Leste Gelado</h5>
