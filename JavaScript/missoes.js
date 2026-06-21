@@ -13,6 +13,10 @@ formulario.addEventListener("submit", (event) => {
         monstro: document.querySelector("#monstro").value
     };
 
+        const missoes = JSON.parse(localStorage.getItem("missoes")) || [];
+    missoes.push(missao);
+    localStorage.setItem("missoes", JSON.stringify(missoes));
+
    
 
         listaMissoes.innerHTML += `
