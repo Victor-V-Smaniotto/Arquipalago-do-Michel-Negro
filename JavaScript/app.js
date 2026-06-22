@@ -2,14 +2,16 @@ const pesquisa = document.querySelector("#pesquisa");
 const resultado = document.querySelector("#resultadoPesquisa");
 const contador = document.querySelector("#contadorItens");
 const semResultado = document.querySelector("#semResultado");
+const filtroCategoria = document.querySelector("#filtroCategoria");
 
-const paginas = [
-    "/Html/Bestiario.html",
-    "/Html/Npcs.html",
-    "/Html/Itens.html",
-    "/Html/Missoes.html",
-    "/Html/Historias.html"
-];
+const paginas = {
+    todos: ["/Html/Bestiario.html", "/Html/Npcs.html", "/Html/Itens.html", "/Html/Missoes.html", "/Html/Historias.html"],
+    monstro: ["/Html/Bestiario.html"],
+    npc: ["/Html/Npcs.html"],
+    item: ["/Html/Itens.html"],
+    missao: ["/Html/Missoes.html"]
+};
+
 
 if (pesquisa && resultado && contador && semResultado) {
     pesquisa.addEventListener("input", () => {
@@ -25,7 +27,7 @@ if (pesquisa && resultado && contador && semResultado) {
 
         let total = 0;
 
-        paginas.forEach((pagina) => {
+        paginas[filtroCategoria.value].forEach((pagina) => {
             fetch(pagina)
                 .then((resposta) => resposta.text())
                 .then((html) => {
@@ -53,5 +55,9 @@ if (pesquisa && resultado && contador && semResultado) {
                     }
                 });
         });
+    });
+
+    filtroCategoria.addEventListener("change", () => {
+        pesquisa.dispatchEvent(new Event("input"));
     });
 }
