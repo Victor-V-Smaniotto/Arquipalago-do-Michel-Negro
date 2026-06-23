@@ -9,8 +9,25 @@ const int = document.querySelector("#val-inteligencia");
 const feedback = document.querySelector("#feedback");
 const btn_dec = document.querySelectorAll(".btn-dec");
 const btn_inc = document.querySelectorAll(".btn-inc");
+const btn_exc = document.querySelectorAll(".btn-excluir");
 
 let pontoRestante = 10;
+
+const personagensSalvos = JSON.parse(localStorage.getItem("personagens")) || [];
+
+personagensSalvos.forEach(user, index => {
+    listaUsers.innerHTML += `
+    <div class="card mt-3 p-3">
+        <h3>${user.nome}</h3>
+        <h4>Raça: ${user.raca}</h4>
+        <h4>Classe: ${user.classe}</h4>
+        <h4>Força: ${user.forca}</h4>
+        <h4>Agilidade: ${user.velocidade}</h4>
+        <h4>Inteligência: ${user.inteligencia}</h4>
+        <button type="button" class="btn-excluir" data-index="${index}">excluir</button>
+    </div>
+    `;
+});
 
 console.log(pontoRestante);
 
@@ -84,6 +101,10 @@ formulario.addEventListener("submit", (event) => {
 
     localStorage.setItem("personagens", JSON.stringify(personagens));
 
+    listaUsers.addEventListener("click", (event) =>{
+        localStorage.removeItem("personagensSalvos");
+    });
+
     listaUsers.innerHTML += `
     <div class="card mt-3 p-3">
         <h3>${user.nome}</h3>
@@ -92,6 +113,7 @@ formulario.addEventListener("submit", (event) => {
         <h4>Força: ${user.forca}</h4>
         <h4>Agilidade: ${user.velocidade}</h4>
         <h4>Inteligência: ${user.inteligencia}</h4>
+        <button type="button" class="btn-excluir" data-index="${index}" >excluir</button>
     </div>
     `;
     formulario.reset();
