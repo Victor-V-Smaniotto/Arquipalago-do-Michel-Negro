@@ -48,7 +48,8 @@ header h1{
 }
 
 header h3{
-    color:#D8C3A5;
+    color:#F5E6CA;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
 }
 
 .mural-de-missoes{
@@ -211,20 +212,58 @@ footer p{
     color:#D8C3A5;
 }
 
-#catalogo{
-    margin-left:15px;
+.pesquisa-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    text-align: center;
 }
 
-#pesquisa{
-    width:200px;
-    height:35px;
-    background:#3b1f11;
-    border:1px solid #a56a3d;
-    color:#f5e6ca;
+#pesquisa,
+#filtroCategoria {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: #3b1f11;
+    border: 1px solid #a56a3d;
+    border-radius: 5px;
+    color: #f5e6ca;
+    font-family: inherit;
+    font-size: 1rem;
 }
 
-#pesquisa::placeholder{
-    color:#d8c3a5;
+#pesquisa::placeholder {
+    color: #d8c3a5;
+}
+
+#resultadoPesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+#resultadoPesquisa a {
+    display: block;
+    padding: 12px 14px;
+    background: #2A170C;
+    border: 1px solid #8B5E3C;
+    border-radius: 6px;
+    color: #D9A441;
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: .3s;
+}
+
+#resultadoPesquisa a:hover {
+    background: #4B2E1E;
+    color: #F5E6CA;
+    box-shadow: 0 0 12px rgba(217,164,65,.35);
+    transform: translateX(4px);
+}
+
+#contadorItens {
+    color: #D8C3A5;
 }
 
 @keyframes portal{

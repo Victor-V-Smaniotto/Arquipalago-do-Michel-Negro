@@ -34,15 +34,19 @@ formulario.addEventListener("submit", (event) => {
 
    
 
-        listaMissoes.innerHTML += `
-        <div class="card mt-3 p-3">
-            <img src="${missao.monstro}" alt="Imagem do monstro" class="img-fluid">
-            <h5>Nome: ${missao.nome}</h5>
-            <p>Descrição: ${missao.descricao}</p>
-            <h6>Perigo: ${missao.perigo}</h6>
-            <h6>Localização: ${missao.localizacao}</h6>
-            <h6>Recompensa: ${missao.recompensa}</h6>
+    listaMissoes.innerHTML += `
+    <div class="Item-card">
+        <div class="card h-100">
+            <img src="${missao.monstro}" alt="Imagem do monstro" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">${missao.nome}</h5>
+                <p class="card-text">Descrição: ${missao.descricao}</p>
+                <h6 class="card-subtitle">Perigo: ${missao.perigo}</h6>
+                <p class="card-text">Localização: ${missao.localizacao}</p>
+                <p class="card-text"><strong>Recompensa: ${missao.recompensa}</strong></p>
+            </div>
         </div>
+    </div>
     `;
     formulario.reset();
 });

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historia</title>
-    <link rel="stylesheet" href="/Css/styleHistoria.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Css/styleHistoria.css">
 </head>
 <body>
 
@@ -29,30 +29,6 @@
                 <li class="nav-item"><a class="nav-link" href="/Html/Cadastro.html">Cadastro</a>       </li>
                 </ul>
 
-                <div class="container my-4">
-                    <input
-                        type="search"
-                        id="pesquisa"
-                        class="form-control mb-3"
-                        placeholder="Pesquisar por nome">
-
-                    <select id="filtroCategoria" class="form-select mb-3">
-                        <option value="todos">Todas as categorias</option>
-                        <option value="monstro">Monstros</option>
-                        <option value="npc">NPCs</option>
-                        <option value="item">Itens</option>
-                        <option value="missao">Missões</option>
-                    </select>
-
-                    <div id="resultadoPesquisa"></div>
-
-                    <p id="contadorItens">Itens exibidos: 0</p>
-
-                    <p id="semResultado" class="text-danger d-none">
-                        Nenhum resultado encontrado.
-                    </p>
-                </div>
-                
             </div>
         </div>
     </nav>
@@ -62,6 +38,29 @@
             Historias das quatro grande áreas do arquipélago
         </h1>
     </header>
+
+    <section class="pesquisa-container">
+    <input
+        type="search"
+        id="pesquisa"
+        placeholder="Pesquisar por nome">
+
+    <select id="filtroCategoria">
+            <option value="todos">Todas as categorias</option>
+            <option value="monstro">Monstros</option>
+            <option value="npc">NPCs</option>
+            <option value="item">Itens</option>
+            <option value="missao">Missoes</option>
+        </select>
+
+        <div id="resultadoPesquisa"></div>
+
+        <p id="contadorItens">Itens exibidos: 0</p>
+
+        <p id="semResultado" class="text-danger d-none">
+            Nenhum resultado encontrado.
+        </p>
+    </section>
 
   <section class="Capitulos">
 
@@ -73,7 +72,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Capítulo I - O Leste Gelado</h5>
                   <p class="card-text">Muito além das florestas do Oeste Sombrio e dos desertos vulcânicos do Sul Ardente, existe uma região esquecida pela maioria dos aventureiros: o Leste Gelado.
-                  ></p>
+                  </p>
                   <div><span>Perigo: </span><strong>8/10</strong></div>
                   <div><span>Fraqueza: </span><strong>Fogo do Sul Ardente</strong></div>
                   <div><span>Origem: </span><strong>Reino Congelado do Leste Gelado</strong></div>
