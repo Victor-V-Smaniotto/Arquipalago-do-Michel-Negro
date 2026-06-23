@@ -76,24 +76,6 @@ Arquipalago-do-Michel-Negro/
 `-- README.md
 ```
 
-## Como executar o projeto
-
-Como o site usa caminhos internos e busca arquivos HTML com JavaScript, o ideal é abrir o projeto usando um servidor local.
-
-Uma opção é usar a extensão **Live Server** no Visual Studio Code.
-
-Outra opção é abrir a pasta do projeto no terminal e executar:
-
-```bash
-python -m http.server 5500
-```
-
-Depois, acesse no navegador:
-
-```txt
-http://localhost:5500/Html/index.html
-```
-
 ## Integrantes
 
 - Augusto Cezar Morgenstern Schaefer

@@ -48,12 +48,44 @@ function deletarCadastro(index){
 listaUsers.addEventListener("click", (event) => {
 
     if(event.target.classList.contains("btn-excluir")) {
-
         const index = event.target.dataset.index;
 
-        deletarCadastro(index);
+        const alerta = confirm("Deseja realmente excluir?");
+                
+        if(alerta){
+            deletarCadastro(index);
+        }
+
     }
 });
+
+formulario.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const user = {
+        nome: document.querySelector("#nome").value,
+        raca: document.querySelector("#raca").value,
+        classe: document.querySelector("#classe").value,
+        forca: Number(document.querySelector("#val-forca").textContent),
+        velocidade: Number(document.querySelector("#val-agilidade").textContent),
+        inteligencia: Number(document.querySelector("#val-inteligencia").textContent)
+    };
+
+
+    const personagens = JSON.parse(localStorage.getItem("personagens")) || [];
+    personagens.push(user);
+    localStorage.setItem("personagens", JSON.stringify(personagens));
+
+
+    renderizarCadastro();
+    formulario.reset();
+
+    pontoRestante = 10;
+    pontosR.textContent = "Pontos restantes: 10";
+    forca.textContent = 0;
+    agi.textContent = 0;
+    int.textContent = 0;
+});
+renderizarCadastro();
 
 console.log(pontoRestante);
 
@@ -109,30 +141,3 @@ btn_inc.forEach(btn =>{
     })
 })
 
-formulario.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const user = {
-        nome: document.querySelector("#nome").value,
-        raca: document.querySelector("#raca").value,
-        classe: document.querySelector("#classe").value,
-        forca: Number(document.querySelector("#val-forca").textContent),
-        velocidade: Number(document.querySelector("#val-agilidade").textContent),
-        inteligencia: Number(document.querySelector("#val-inteligencia").textContent)
-    };
-
-
-    const personagens = JSON.parse(localStorage.getItem("personagens")) || [];
-    personagens.push(user);
-    localStorage.setItem("personagens", JSON.stringify(personagens));
-
-
-    renderizarCadastro();
-    formulario.reset();
-
-    pontoRestante = 10;
-    pontosR.textContent = "Pontos restantes: 10";
-    forca.textContent = 0;
-    agi.textContent = 0;
-    int.textContent = 0;
-});
-renderizarCadastro();
