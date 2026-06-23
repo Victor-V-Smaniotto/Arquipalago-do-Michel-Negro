@@ -43,7 +43,7 @@ formulario.addEventListener("submit", (event) => {
                 <p class="card-text">Descrição: ${missao.descricao}</p>
                 <h6 class="card-subtitle">Perigo: ${missao.perigo}</h6>
                 <p class="card-text">Localização: ${missao.localizacao}</p>
-                <p class="card-text"><strong>Recompensa: ${missao.recompensa}</strong></p>
+                <p class="card-text">Recompensa: <strong>${missao.recompensa}</strong></p>
             </div>
         </div>
     </div>
