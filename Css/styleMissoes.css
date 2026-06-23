@@ -334,3 +334,38 @@ input:-webkit-autofill:focus{
     -webkit-text-fill-color:#f5e6ca !important;
     -webkit-box-shadow:0 0 0px 1000px #3b1f11 inset !important;
 }
+
+.btn-excluir{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+
+    background:#8b0000;
+    color:#F5E6CA;
+
+    border:2px solid #D9A441;
+    border-radius:10px;
+
+    font-family:'MedievalSharp', cursive;
+    font-size:1rem;
+    font-weight:bold;
+
+    cursor:pointer;
+    transition:.3s;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.5);
+}
+
+.btn-excluir:hover{
+    background:#b30000;
+    color:white;
+
+    transform:scale(1.03);
+
+    box-shadow:
+    0 0 15px rgba(217,164,65,.6);
+}
+
+.btn-excluir:active{
+    transform:scale(.97);
+}
