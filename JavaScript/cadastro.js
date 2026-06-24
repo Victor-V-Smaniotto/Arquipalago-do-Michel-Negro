@@ -11,6 +11,13 @@ const btn_dec = document.querySelectorAll(".btn-dec");
 const btn_inc = document.querySelectorAll(".btn-inc");
 const btn_exc = document.querySelectorAll(".btn-excluir");
 
+const confirmar = document.querySelector("#confirmacaoCadastro");
+const btn_sim = document.querySelector("#btn-sim");
+const btn_nao = document.querySelector("#btn-nao");
+
+let indexValor = null;
+
+
 let pontoRestante = 10;
 
 
@@ -48,14 +55,27 @@ function deletarCadastro(index){
 listaUsers.addEventListener("click", (event) => {
 
     if(event.target.classList.contains("btn-excluir")) {
-        const index = event.target.dataset.index;
 
-        const alerta = confirm("Deseja realmente excluir este personagem?");       
-
-        if(alerta){deletarCadastro(index);}
-
+        indexValor = event.target.dataset.index;
+        confirmar.classList.remove("d-none");
     }
 });
+
+btn_sim.addEventListener("click", (event) => {
+
+    if(indexValor !== null){
+        deletarCadastro(Number(indexValor));
+        indexValor = null;
+        confirmar.classList.add("d-none");
+    }
+})
+
+btn_nao.addEventListener("click", (event) => {
+
+    indexValor = null;
+    confirmar.classList.add("d-none");
+})
+
 
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();

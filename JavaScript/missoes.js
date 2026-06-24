@@ -1,7 +1,7 @@
 const formulario = document.querySelector("#formulario");
 const listaMissoes = document.querySelector("#lista-missoes");
 
-const confirmar = document.querySelector("#confirmacao");
+const confirmar = document.querySelector("#confirmacaoMissao");
 const btn_sim = document.querySelector("#btn-sim");
 const btn_nao = document.querySelector("#btn-nao");
 
