@@ -50,11 +50,9 @@ listaUsers.addEventListener("click", (event) => {
     if(event.target.classList.contains("btn-excluir")) {
         const index = event.target.dataset.index;
 
-        const alerta = confirm("Deseja realmente excluir?");
-                
-        if(alerta){
-            deletarCadastro(index);
-        }
+        const alerta = confirm("Deseja realmente excluir este personagem?");       
+
+        if(alerta){deletarCadastro(index);}
 
     }
 });

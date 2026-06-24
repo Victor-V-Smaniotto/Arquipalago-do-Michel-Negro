@@ -1,6 +1,11 @@
 const formulario = document.querySelector("#formulario");
 const listaMissoes = document.querySelector("#lista-missoes");
 
+const confirmar = document.querySelector("#confirmacao");
+const btn_sim = document.querySelector("#btn-sim");
+const btn_nao = document.querySelector("#btn-nao");
+
+let indexValor = null;
 
 function renderizarMissao(){
     listaMissoes.innerHTML = "";
@@ -22,7 +27,7 @@ function renderizarMissao(){
     });
 };
 
-function deletarCadastro(index){
+function deletarMissoes(index){
     const missoes = JSON.parse(localStorage.getItem("missoes")) || [];
 
     missoes.splice(index, 1);
@@ -36,11 +41,23 @@ listaMissoes.addEventListener("click", (event) => {
 
     if(event.target.classList.contains("btn-excluir")) {
 
-        const index = event.target.dataset.index;
-
-        deletarCadastro(index);
+        indexValor = event.target.dataset.index;
+        confirmar.classList.remove("d-none");
     }
 });
+btn_sim.addEventListener("click", (event) => {
+
+    if(indexValor !== null){
+        deletarMissoes(Number(indexValor));
+        indexValor = null;
+        confirmar.classList.add("d-none");
+    }
+})
+btn_nao.addEventListener("click", (event) => {
+
+    indexValor = null;
+    confirmar.classList.add("d-none");
+})
 
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
